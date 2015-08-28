@@ -1,3 +1,123 @@
+/*foundation overrides*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+p{
+    font-weight: 300 !important;
+    font-family: "Open Sans", sans-serif !important;
+}
+li{
+    font-weight: 300 !important;
+    font-family: "Open Sans", sans-serif !important;
+}
+div{
+    font-weight: 300 !important;
+    font-family: "Open Sans", sans-serif !important;
+}
+h1{
+    /*font-weight: 200 !important;*/
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.top-bar{
+    background: #ffffff;
+}
+.top-bar .expanded{
+    background: #ffffff;
+}
+.top-bar .toggle-topbar.menu-icon a span::after{
+    box-shadow:0 0 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
+}
+.top-bar.expanded .toggle-topbar a{
+    color: #000000 !important;
+}
+
+.title-area{
+    background: transparent !important;
+}
+.contain-to-grid{
+    background: #ffffff;
+    min-height: 55px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+.name h1 a{
+    color:#000000 !important;
+    font-weight: 200 !important;
+    margin-top:5px;
+}
+.top-bar-section ul li{
+    background: white;
+}
+.top-bar-section ul li a{
+    background: transparent !important;
+    color:black !important;
+    border:5px solid white;
+}
+.top-bar-section ul .active a{
+     border-bottom:5px solid #008CBA !important;
+ }
+.top-bar-section ul li a:hover{
+    border-bottom:5px solid #777;
+}
+@media only screen
+    and (max-width: 480px) {
+    .name h1 a {
+        font-size: 1.2em;
+    }
+}
+@media only screen and (min-width: 481px)
+    {
+    .name h1 a {
+        font-size: 1.8em;
+    }
+}
+
+
+/*home*/
+.heropanel{
+    position: absolute;
+    margin: 0;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    /*background-color:rgba(0,0,0,0.05) !important;*/
+    border:1px solid #d8d8d8 !important;
+}
+.contactpanel{
+    position: absolute;
+    margin: 0;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+.heropanel p{
+    font-size: 1.2em;
+    color:#333333 !important;
+}
+.heropanel h1{
+    font-size:4em;
+    color:#373737 !important;
+}
+.profilepic{
+    background-size: cover;
+    display: block;
+    /*left: 0;*/
+    position: relative;
+    /*right: 0;*/
+    z-index: 1;
+    background-image: url('/img/profilepic.png');
+    background-position: center;
+}
+.hard{
+    font-weight: 500;
+}
+
+/*resume*/
 .text-overlayer{
     background-color:transparent !important;
     z-index: 2;
@@ -7,23 +127,46 @@
 .subheading-text{
     position:relative;
     left:-50%;
-    margin-top:-75px;
-    font-weight: 700;
+    margin-top:-65px;
+    font-weight: 300;
+    color:white !important;
+    text-shadow: 0px 0px 5px rgba(20, 20, 20, 1);
+    font-size: 2em;
+    min-width: 350px;
 }
-* {
-    box-sizing: border-box;
-}
-
 .background-image {
-    background-image: url('http://cdn.silodrome.com/wp-content/uploads/2013/11/1903-Wright-Flyer-Blueprints-Free-Download1.jpg');
     background-size: cover;
     display: block;
-    filter: blur(1px);
-    -webkit-filter: blur(5px);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
     height: 100px;
     /*left: 0;*/
     position: relative;
     /*right: 0;*/
     z-index: 1;
     overflow: hidden;
+}
+.background-image.img-skills{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('resumebg/skills.png');
+}
+.background-image.img-work{
+    background-image: url('resumebg/work.png');
+}
+.background-image.img-school{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('resumebg/school.png');
+}
+.background-image.img-other{
+    background-image: url('resumebg/other.png');
+}
+.background-image.img-interests{
+    background-image: url('resumebg/interests.png');
+}
+.panel{
+    background:transparent;
+    border:none;
+}
+
+/*contact*/
+.contacttext{
+    font-size:1.5em;
 }
