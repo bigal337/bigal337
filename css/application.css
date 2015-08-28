@@ -110,7 +110,7 @@ h1{
     position: relative;
     /*right: 0;*/
     z-index: 1;
-    background-image: url('/img/profilepic.png');
+    background-image: url('./img/profilepic.png');
     background-position: center;
 }
 .hard{
