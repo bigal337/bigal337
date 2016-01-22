@@ -170,3 +170,19 @@ h1{
     -webkit-transform: translate3d(-50%,-50%,0);
     transform: translate3d(-50%,-50%,0);
 }
+.accordion-navigation a{
+    background: #EEE !important;
+    /*border-left: 1px solid #008CBA;*/
+    margin-bottom: 1px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.accordion-navigation a:hover{
+    border-left: 5px solid #008CBA;
+}
+.accordion-navigation.active a{
+    border-left: 5px solid #008CBA;
+}
