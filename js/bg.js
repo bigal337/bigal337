@@ -9,7 +9,7 @@
 
     function initHeader() {
         width = window.innerWidth - 15;
-        height = 750;
+        height = window.innerHeight - 25;
         target = {x: width/2, y: height/2};
 
         largeHeader = document.getElementById('large');
@@ -17,15 +17,15 @@
 
         canvas = document.getElementById('draw');
         canvas.width = width;
-        canvas.height = 750;
+        canvas.height = height;
         ctx = canvas.getContext('2d');
 
         // create points
         points = [];
-        for(var x = 0; x < width; x = x + width/20) {
-            for(var y = 0; y < height; y = y + height/20) {
-                var px = x + Math.random()*width/20;
-                var py = y + Math.random()*height/20;
+        for(var x = 0; x < width; x = x + width/15) {
+            for(var y = 0; y < height; y = y + height/15) {
+                var px = x + Math.random()*width/15;
+                var py = y + Math.random()*height/15;
                 var p = {x: px, originX: px, y: py, originY: py };
                 points.push(p);
             }
@@ -118,17 +118,17 @@
             for(var i in points) {
                 // detect points in range
                 if(Math.abs(getDistance(target, points[i])) < 4000) {
-                    points[i].active = 0.3;
+                    points[i].active = 0.5;
                     points[i].circle.active = 0.6;
-                } else if(Math.abs(getDistance(target, points[i])) < 20000) {
-                    points[i].active = 0.1;
+                } else if(Math.abs(getDistance(target, points[i])) < 50000) {
+                    points[i].active = 0.2;
                     points[i].circle.active = 0.3;
-                } else if(Math.abs(getDistance(target, points[i])) < 40000) {
+                } else if(Math.abs(getDistance(target, points[i])) < 100000) {
                     points[i].active = 0.02;
                     points[i].circle.active = 0.1;
                 } else {
-                    points[i].active = 0;
-                    points[i].circle.active = 0;
+                    points[i].active = 0.0;
+                    points[i].circle.active = 0.0;
                 }
 
                 drawLines(points[i]);
@@ -139,8 +139,9 @@
     }
 
     function shiftPoint(p) {
-        TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*100,
-            y: p.originY-50+Math.random()*100, ease:Circ.easeInOut,
+        TweenLite.to(p, 1+1*Math.random(), {
+            x:p.originX-20+Math.random()*100,
+            y:p.originY-50+Math.random()*100, ease:Circ.easeInOut,
             onComplete: function() {
                 shiftPoint(p);
             }});

@@ -17,7 +17,10 @@ h1{
     /*font-weight: 200 !important;*/
     font-family: "Open Sans", sans-serif !important;
 }
-
+.hard{
+    font-weight: 500;
+}
+/*navbar styling*/
 .top-bar{
     background: #ffffff;
 }
@@ -30,7 +33,6 @@ h1{
 .top-bar.expanded .toggle-topbar a{
     color: #000000 !important;
 }
-
 .title-area{
     background: transparent !important;
 }
@@ -74,6 +76,7 @@ h1{
 }
 
 
+
 /*home*/
 .heropanel{
     position: absolute;
@@ -85,15 +88,6 @@ h1{
     transform: translate3d(-50%,-50%,0);
     /*background-color:rgba(0,0,0,0.05) !important;*/
     border:1px solid #d8d8d8 !important;
-}
-.contactpanel{
-    position: absolute;
-    margin: 0;
-    padding: 30px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate3d(-50%,-50%,0);
-    transform: translate3d(-50%,-50%,0);
 }
 .heropanel p{
     font-size: 1.2em;
@@ -110,11 +104,8 @@ h1{
     position: relative;
     /*right: 0;*/
     z-index: 1;
-    background-image: url('/img/profilepic.png');
-    background-position: center;
-}
-.hard{
-    font-weight: 500;
+    background-image: url('profilepic.png');
+    background-position: center ;
 }
 
 /*resume*/
@@ -169,4 +160,29 @@ h1{
 /*contact*/
 .contacttext{
     font-size:1.5em;
+}
+.contactpanel{
+    position: absolute;
+    margin: 0;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+.accordion-navigation a{
+    background: #EEE !important;
+    /*border-left: 1px solid #008CBA;*/
+    margin-bottom: 1px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.accordion-navigation a:hover{
+    border-left: 5px solid #008CBA;
+}
+.accordion-navigation.active a{
+    border-left: 5px solid #008CBA;
 }
